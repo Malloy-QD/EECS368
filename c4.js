@@ -4,10 +4,7 @@ var count = 0;
 var player = 1;
 constructor();
 setArr();
-UI();
-function UI(){
 
-}
 //constructe the game board with circle without any color
 function constructor(){
   //set canvas element
@@ -25,14 +22,14 @@ function constructor(){
   }
   //print  1 2 3 4 5 6 7 at the bottom part(Programing only)
   //Might using this in the furture
-  this.ctx.font = "30px Arial";
-  this.ctx.strokeText("1", 90, 700);
-  this.ctx.strokeText("2", 190, 700);
-  this.ctx.strokeText("3", 290, 700);
-  this.ctx.strokeText("4", 390, 700);
-  this.ctx.strokeText("5", 490, 700);
-  this.ctx.strokeText("6", 590, 700);
-  this.ctx.strokeText("7", 690, 700);
+  // this.ctx.font = "30px Arial";
+  // this.ctx.strokeText("1", 90, 700);
+  // this.ctx.strokeText("2", 190, 700);
+  // this.ctx.strokeText("3", 290, 700);
+  // this.ctx.strokeText("4", 390, 700);
+  // this.ctx.strokeText("5", 490, 700);
+  // this.ctx.strokeText("6", 590, 700);
+  // this.ctx.strokeText("7", 690, 700);
 
 }
 
