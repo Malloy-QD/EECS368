@@ -1,0 +1,78 @@
+body{
+  background:#eee;
+
+}
+
+h2 {
+  position: absolute;
+  left: 95px;
+  top: 660px;
+}
+h3 {
+  position: absolute;
+  left: 195px;
+  top: 665px;
+}
+h4 {
+  position: absolute;
+  left: 295px;
+  top: 665px;
+}
+h5 {
+  position: absolute;
+  left: 395px;
+  top: 664px;
+}h6 {
+  position: absolute;
+  left: 495px;
+  top: 661px;
+}
+h7 {
+  position: absolute;
+  left: 595px;
+  top: 686px;
+}
+h8 {
+  position: absolute;
+  left: 695px;
+  top: 686px;
+}
+p{
+  position: absolute;
+font-style: italic;
+  font-size: 50px;
+  left:900px;
+  top: 100px;
+
+}
+p2{
+  position: absolute;
+font-style: italic;
+  font-size: 30px;
+  left:900px;
+  top: 300px;
+
+}
+p3{
+  position: absolute;
+font-style: italic;
+  font-size: 30px;
+  left:900px;
+  top: 400px;
+  color: red;
+
+}
+p4{
+  position: absolute;
+font-style: italic;
+  font-size: 30px;
+  left:900px;
+  top: 450px;
+  color: Yellow;
+
+}
+h1{
+  position: absolute;
+  left: 900px;
+  top: 500px;
+}
