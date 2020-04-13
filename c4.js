@@ -2,9 +2,14 @@ var Board = new Array();
 var flag = 1;
 var count = 0;
 var player = 1;
+//create gameboard
 constructor();
+//crete 2d array to store gameboard
 setArr();
+//showing the userinterface
 rotate(flag);
+
+
 //constructe the game board with circle without any color
 function constructor(){
   //set canvas element
@@ -235,7 +240,9 @@ function destructor(){
 })
 }
 
+//rotate interface that showing who's turn and destructe everytime before called
 function rotate(flag){
+  //playerone'turn
   if (flag == 1){
 
               this.c = document.getElementById("playerarea");
@@ -250,6 +257,7 @@ function rotate(flag){
               this.ctx.strokeText("PlayerOne's Turn", 490, 430);
 
   }
+  //PlayerTwo's turn
   else if(flag == 2){
     this.c = document.getElementById("playerarea");
     this.ctx = this.c.getContext("2d");
