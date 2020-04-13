@@ -4,7 +4,7 @@ var count = 0;
 var player = 1;
 constructor();
 setArr();
-
+rotate(flag);
 //constructe the game board with circle without any color
 function constructor(){
   //set canvas element
@@ -179,7 +179,9 @@ function place(choice,player){
                 'Player Two Wins',
                 'success'
               )
-
+              this.c = document.getElementById("playerarea");
+              this.ctx = this.c.getContext("2d");
+              this.ctx.clearRect (300, 300 , 630, 430 );
               break;
             }
             break;
@@ -195,6 +197,16 @@ function place(choice,player){
 //onclick function that used by html, simulate the process that user interact with button
 function gameLoop(temp){
 place(temp-1,flag);
+if(Win(1) || Win(-1)){
+  this.c = document.getElementById("playerarea");
+  this.ctx = this.c.getContext("2d");
+  this.ctx.clearRect (300, 300 , 630, 430 );
+  this.ctx.font = "30px Arial";
+  this.ctx.strokeText("Game!", 490, 430);
+}
+else {
+  rotate(flag);
+}
 }
 
 //reset function, draw the board again and set
@@ -218,6 +230,36 @@ function destructor(){
     setArr();
     flag = 1;
     count = 0;
+    rotate(flag);
   }
 })
+}
+
+function rotate(flag){
+  if (flag == 1){
+
+              this.c = document.getElementById("playerarea");
+              this.ctx = this.c.getContext("2d");
+              this.ctx.clearRect (300, 300 , 630, 430 );
+              this.ctx.beginPath();
+              this.ctx.arc(600, 500, 50, 0, 2 * Math.PI);
+              this.ctx.fillStyle = "red";
+              this.ctx.fill();
+              this.ctx.stroke();
+              this.ctx.font = "30px Arial";
+              this.ctx.strokeText("PlayerOne's Turn", 490, 430);
+
+  }
+  else if(flag == 2){
+    this.c = document.getElementById("playerarea");
+    this.ctx = this.c.getContext("2d");
+                  this.ctx.clearRect (300, 300 , 630, 430 );
+    this.ctx.beginPath();
+    this.ctx.arc(600, 500, 50, 0, 2 * Math.PI);
+    this.ctx.fillStyle = "yellow";
+    this.ctx.fill();
+    this.ctx.stroke();
+    this.ctx.font = "30px Arial";
+    this.ctx.strokeText("PlayerTwo's Turn", 490, 430);
+  }
 }
